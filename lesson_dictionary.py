@@ -118,3 +118,70 @@ fruits = {
 }
 
 print(fruits['apple'])
+
+# 27_集合型
+# >>> a = {1, 2, 2, 3, 4, 4, 4, 5, 6}
+# >>> a
+# {1, 2, 3, 4, 5, 6}
+# >>> type(a)
+# <class 'set'>
+# >>> b = {2, 3, 3, 6, 7}
+# >>> b
+# {2, 3, 6, 7}
+# >>> a
+# {1, 2, 3, 4, 5, 6}
+# >>> b
+# {2, 3, 6, 7}
+# >>> a - b
+# {1, 4, 5}
+# >>> b - a
+# {7}
+# >>> a & b
+# {2, 3, 6}
+# >>> a + b
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+# TypeError: unsupported operand type(s) for +: 'set' and 'set'
+# >>> a | b
+# {1, 2, 3, 4, 5, 6, 7}
+# >>> a ^ b
+# {1, 4, 5, 7}
+
+# 28_集合のメソッド
+# >>> s = {1, 2, 3, 4, 5}
+# >>> s
+# {1, 2, 3, 4, 5}
+# >>> s[0]
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+# TypeError: 'set' object does not support indexing
+# >>> s.add(6)
+# >>> s
+# {1, 2, 3, 4, 5, 6}
+# >>> s.add(6)
+# >>> s
+# {1, 2, 3, 4, 5, 6}
+# >>> s.remove(6)
+# >>> s
+# {1, 2, 3, 4, 5}
+# >>> s.clear()
+# >>> s
+# set()
+# >>> a = {}
+# >>> type(a)
+# <class 'dict'>
+# >>> a
+# {}
+# >>> help(set)
+
+# 29_集合の使い所
+my_friends = {'A', 'C', 'D'}
+A_friends = {'B', 'D', 'E', 'F'}
+print('共通の友達')
+print(my_friends & A_friends)
+
+f = ['apple', 'banana', 'apple', 'banana']
+# リストから型変換し重複を排除
+kind = set(f)
+print(f)
+print(kind)
